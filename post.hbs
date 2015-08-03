@@ -78,7 +78,7 @@
         <script type="text/javascript">
             var disqus_shortname = 'zanui-tech';
             var disqus_identifier = '{{post.id}}';
-         
+
             /* * * DON'T EDIT BELOW THIS LINE * * */
             (function() {
                 var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
@@ -87,7 +87,17 @@
             })();
         </script>
         <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a> 
+        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+        <div class="kudos" data-amount="0" data-url="{{url absolute="true"}}" style="position: fixed; bottom: 5px; right: 15px; font-size: 15px; z-index: 9999;"></div>
+        <link rel="stylesheet" href="{{asset "css/kudosplease-min.css"}}">
+        <script src="{{asset "js/kudosplease-min.js"}}"></script>
+        <script type="text/javascript">
+            new KudosPlease({
+                el : '.kudos', duration : 1500, persistent : true,
+                status : { alpha: 'fontelico-emo-shoot', beta: 'fontelico-emo-shoot', gamma: 'fontelico-emo-beer' }
+            });
+        </script>
 
     </article>
 </main>
